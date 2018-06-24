@@ -4,7 +4,6 @@ pipeline {
 	stages {
 		stage('Compile Stage') {
 			steps {
-					withGradle(gradle : 'gradle-4.5.1') {
 					sh 'gradle clean'
 				}
 			}
@@ -12,7 +11,6 @@ pipeline {
 
 		stage('Build Stage') {
 			steps {
-					withGradle(gradle : 'gradle-4.5.1') {
 					sh 'gradle build'
 				}
         	}
@@ -20,7 +18,6 @@ pipeline {
 
 		stage('Deploy Stage') {
 			steps {
-					withGradle(gradle : 'gradle-4.5.1') {
 					sh 'gradle bootRun'
 				}
         	}
