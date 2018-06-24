@@ -6,7 +6,6 @@ pipeline {
 			steps {
 					sh 'gradle clean'
 				}
-			}
 		}
 
 		stage('Build Stage') {
@@ -14,14 +13,11 @@ pipeline {
 					sh 'gradle build'
 				}
         	}
-        }
 
 		stage('Deploy Stage') {
 			steps {
 					sh 'gradle bootRun'
 				}
         	}
-        }
-
 	}
 }
